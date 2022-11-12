@@ -1,0 +1,256 @@
+:root   {
+    --dark-color: rgba(88, 123, 127, 1);
+    --light-color: rgba(210, 207, 203, 0.82);
+    --green-color:rgb(57, 62, 65);
+    --yellow:  rgb(226, 192, 68);
+    --shadow-color  :#eff7fa;
+    --dark-color-blur :rgba(87, 123, 127, 60%);
+
+}
+html    {
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+body {
+    font-family: "roboto", sans-serif;
+}
+/*Navigation bar starts*/
+.navbar {
+    background-color: var(--dark-color);
+
+}
+.nav-item .nav-link {
+    color: white;
+}
+.nav-item .nav-link.active,
+.nav-item .nav-link:hover,
+.nav-item .nav-link:focus {
+    color: var(--green-color);
+}
+.search {
+    color:var(--green-color) ;
+    display: flex;
+    border-left: solid 1px var(--green-color);
+}
+.navbar-toggler {
+    color: white;
+    font-size: 25px;
+    border: none;
+}
+.navbar-toggler[aria-expanded="true"] {
+    color: var(--green-color);
+}
+.navbar[aria-expanded="true"] {
+    border-bottom: white;
+}
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+.main-btn,
+.main-btn:focus{
+    background-color: white;
+    color: var(--yellow);
+    border: none;
+
+}
+
+.main-btn:hover{
+    background-color: var(--green-color);
+    color: white;
+    border: none;
+}
+
+/*Navigation bar end*/
+/*Start Landing*/
+.landing {
+    background-color: var(--dark-color);
+    min-height: calc(100vh - 72px);
+}
+.landing .main-btn ,
+.workstaion .main-btn,
+.about .main-btn ,
+.project .main-btn ,
+.sub .main-btn{
+    background-color: var(--green-color);
+}
+.landing .main-btn:hover ,
+.workstaion .main-btn:hover ,
+.sub .main-btn ,
+.about .main-btn ,
+.project .main-btn {
+    background-color: rgba(57, 62, 65, 0.90);
+}
+/*End Landing*/
+/*start features*/
+.features .main-title svg:first-child {
+    color: var(--yellow);
+
+}
+.main-title::after {
+    content:'';
+    width: 120px;
+    height: 2px;
+    background-color: var(--dark-color);
+    position: absolute;
+    transform: translatex(-50%);
+}
+.icon_holder {
+    height: 200px;
+}
+.icon_holder .number {
+    font-size: 12rem;
+    color: var(--shadow-color);
+}
+.icon_holder .icon {
+    font-size: 4rem;
+    color: var(--green-color);
+}
+.features .row h3 {
+    color: var(--yellow);
+}
+/*end features*/
+/*start workstation*/
+.workstaion {
+    background-color: var(--shadow-color);
+}
+.workstaion .main-title svg:first-child {
+    color: var(--yellow);
+}
+.workstaion li{
+    cursor: pointer;
+}
+.workstaion li:focus-within ,
+.workstaion li.active-nav{
+    background-color: var(--yellow);
+    cursor: pointer;
+}
+.workstaion li.active-nav:hover a {
+    color: var(--green-color);
+}
+.workstaion li a{
+    color: var(--green-color) ;
+    cursor: pointer;
+}
+.workstaion li:focus-within a {
+    color: var(--dark-color) ;
+}
+.workstaion li:hover a  {
+    color: var(--yellow);
+}
+.workstaion .card::before {
+    content: attr(data-work);
+    font-size: 1.7rem;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    text-transform: capitalize;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: var(--dark-color-blur);
+    transform: translateX(-100%);
+    transition: 0.3s;
+}
+.card:hover::before {
+    display: flex;
+    transform: translateX(0);
+}
+.card img {
+    height: 203px;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+/*end worksation*/
+/*start about us*/
+.about .container .main-title svg {
+    color: var(--yellow);
+}
+/*end about us*/
+/*start team*/
+.team {
+    background-color: var(--shadow-color);
+}
+.team .title h2 {
+    color: var(--yellow);
+}
+.team .container .row .card-holder .card .card-title {
+    background-color: var(--dark-color);
+    color: white;
+}
+.team .card img {
+    height: 300px;
+    object-fit: cover;
+    object-position: top;
+}
+/*end team*/
+/*start sponsor*/
+.sponsor .container .row p {
+    font-size: larger;
+}
+.sponsor .container .row img {
+}
+/*end sponsor*/
+/*start project*/
+.project {
+    background-color: var(--dark-color);
+}
+.project h1 {
+    color: white;
+}
+/*end project*/
+/*start blog */
+.blog .container .main-title svg {
+    color: var(--yellow);
+}
+.blog   .container .row .card img{
+    object-fit: cover;
+    object-position: top;
+}
+/*end blog*/
+/*start subscribe*/
+.sub {
+    background-color: var(--yellow);
+}
+input {
+    border-bottom: white;
+    color: white;
+    outline: 0;
+}
+input::placeholder {
+    color: white;
+}
+/*end subscribe*/
+.footer {
+    background-color: var(--dark-color);
+}
+.footer svg {
+    color: white;
+    font-size: 1.3rem;
+}
+.footer .container .row div:last-child ul li a {
+    transition: ease;
+}
+.footer .container .row div:last-child ul li a:hover {
+    transform: scale(120%);
+}
+.footer a.fb {
+    background-color:#4267B2;
+}
+.footer a.tw {
+    background-color: #00acee ;
+}
+.footer a.yt {
+    background-color: #FF0000;
+}
+.footer a.in {
+    background-color: #0072b1;
+}
+.footer .copyright div:first-child span:last-child {
+    color: var(--yellow);
+}
+.footer .copyright div:last-child span:last-child{
+    color: var(--green-color);
+}
